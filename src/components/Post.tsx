@@ -12,7 +12,7 @@ interface Author {
     avatarUrl: string;
 }
 interface Content{
-    type: "paragraph" | "link";
+    type: string;
     content: string
 }
 interface PostProps {
@@ -21,7 +21,6 @@ interface PostProps {
     publishedAt: Date,
     content: Content[]
 }
-
 export function Post({ id, author, publishedAt, content }: PostProps) {
 
     const [comments, setComments] = useState(['Post Legal'])
